@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains integration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function integration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the integration module.
+    case 'help.page.integration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function integration_theme() {
+  return [
+    'integration' => [
+      'render element' => 'children',
+    ],
+  ];
+}

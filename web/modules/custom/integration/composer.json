@@ -1,0 +1,13 @@
+{
+    "name": "integration",
+    "type": "drupal-module",
+    "description": "My Awesome Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/integration",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/integration",
+        "source": "http://cgit.drupalcode.org/integration",
+    },
+}
