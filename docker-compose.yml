@@ -24,25 +24,25 @@ services:
         #    ports:
         #      - 3306:3306
   # Spawn a Selenium server which also includes a VNC server on localhost:5900 (the password is "secret")
-  #selenium:
-  #  image: selenium/standalone-chrome-debug:3.11
-  #  environment:
-  #    - DISPLAY=:99
-  #    - SE_OPTS=-debug
-  #  ports:
-  #    - "5900:5900"
-  #  expose:
-  #    - '4444'
-  #node:
-  #  image: node:9.5.0
-  #  user: "node"
-  #  working_dir: /home/node/app
-  #  environment:
-  #    - NODE_ENV=${NODE_ENV}
-  #    - SHELL=bash
-  #  volumes:
-  #    - ./:/home/node/app
-  #  command: "sleep infinity"
+  selenium:
+    image: selenium/standalone-chrome-debug:3.11
+    environment:
+      - DISPLAY=:99
+      - SE_OPTS=-debug
+    ports:
+      - "5900:5900"
+    expose:
+      - '4444'
+  node:
+    image: node:9.5.0
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - SHELL=bash
+    volumes:
+      - ./:/home/node/app
+    command: "sleep infinity"
 #### Mac users: uncomment the "volumes" key to enable the NFS file sharing. You can find more information about Docker for Mac here: https://github.com/openeuropa/openeuropa/blob/master/docs/starting/tooling.md#using-docker-on-macos
 
 volumes:
