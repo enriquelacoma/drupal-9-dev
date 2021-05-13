@@ -89,6 +89,9 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^9.1"
+        "drupal/core-dev": "^9.1",
+        "drupal/devel": "^4.1",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/twig_vardumper": "^3.0"
     }
 }
